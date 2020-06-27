@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Vinson's Scene.unity
+=======
+- path: Assets/Scenes/Thuan's Scene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
