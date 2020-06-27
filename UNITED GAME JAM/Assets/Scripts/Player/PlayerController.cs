@@ -97,13 +97,15 @@ public class PlayerController : MonoBehaviour
                 print("Shoot");
                 nextAttack = Time.time + 1 / gunController.fireRate;
 
-                GameObject leftBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], gunController.leftBulletSpawn.position, Quaternion.identity);
-                GameObject rightBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], gunController.rightBulletSpawn.position, Quaternion.identity);
+                GameObject leftBulletSpawn = GameObject.FindGameObjectWithTag("Left Bullet Spawn");
+                GameObject rightBulletSpawn = GameObject.FindGameObjectWithTag("Right Bullet Spawn");
+                GameObject leftBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                GameObject rightBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
 
                 Rigidbody leftRb = leftBulletObj.GetComponent<Rigidbody>();
-                leftRb.AddForce(gunController.leftBulletSpawn.transform.forward * projectileSpeed);
+                leftRb.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
                 Rigidbody rightRb = rightBulletObj.GetComponent<Rigidbody>();
-                rightRb.AddForce(gunController.rightBulletSpawn.transform.forward * projectileSpeed);
+                rightRb.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                 switch (gunController.typeOfGun)
                 {
