@@ -99,80 +99,121 @@ public class PlayerController : MonoBehaviour
 
                 GameObject leftBulletSpawn = GameObject.FindGameObjectWithTag("Left Bullet Spawn");
                 GameObject rightBulletSpawn = GameObject.FindGameObjectWithTag("Right Bullet Spawn");
-                GameObject leftBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
-                GameObject rightBulletObj = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
-
-                Rigidbody leftRb = leftBulletObj.GetComponent<Rigidbody>();
-                leftRb.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
-                Rigidbody rightRb = rightBulletObj.GetComponent<Rigidbody>();
-                rightRb.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                 switch (gunController.typeOfGun)
                 {
                     // pistol
                     case 1:
-                        PistolBullet leftPistolBullet = leftBulletObj.GetComponent<PistolBullet>();
+                        GameObject leftBulletObj1 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj1 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        PistolBullet leftPistolBullet = leftBulletObj1.GetComponent<PistolBullet>();
                         leftPistolBullet.damage = gunController.damage;
                         leftPistolBullet.range = gunController.range;
 
-                        PistolBullet rightPistolBullet = rightBulletObj.GetComponent<PistolBullet>();
+                        PistolBullet rightPistolBullet = rightBulletObj1.GetComponent<PistolBullet>();
                         rightPistolBullet.damage = gunController.damage;
                         rightPistolBullet.range = gunController.range;
+
+                        Rigidbody leftRb1 = leftBulletObj1.GetComponent<Rigidbody>();
+                        leftRb1.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb1 = rightBulletObj1.GetComponent<Rigidbody>();
+                        rightRb1.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                     // shotgun
                     case 2:
-                        ShotgunBullet leftShotgunBullet = leftBulletObj.GetComponent<ShotgunBullet>();
+                        GameObject leftBulletObj2 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj2 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        ShotgunBullet leftShotgunBullet = leftBulletObj2.GetComponent<ShotgunBullet>();
                         leftShotgunBullet.damage = gunController.damage;
                         leftShotgunBullet.range = gunController.range;
 
-                        ShotgunBullet rightShotgunBullet = rightBulletObj.GetComponent<ShotgunBullet>();
+                        ShotgunBullet rightShotgunBullet = rightBulletObj2.GetComponent<ShotgunBullet>();
                         rightShotgunBullet.damage = gunController.damage;
                         rightShotgunBullet.range = gunController.range;
+
+                        Rigidbody leftRb2 = leftBulletObj2.GetComponent<Rigidbody>();
+                        leftRb2.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb2 = rightBulletObj2.GetComponent<Rigidbody>();
+                        rightRb2.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                     // assault rifle
                     case 3:
-                        RifleBullet leftRifleBullet = leftBulletObj.GetComponent<RifleBullet>();
+                        GameObject leftBulletObj3 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj3 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        RifleBullet leftRifleBullet = leftBulletObj3.GetComponent<RifleBullet>();
                         leftRifleBullet.damage = gunController.damage;
                         leftRifleBullet.range = gunController.range;
 
-                        RifleBullet rightRifleBullet = rightBulletObj.GetComponent<RifleBullet>();
+                        RifleBullet rightRifleBullet = rightBulletObj3.GetComponent<RifleBullet>();
                         rightRifleBullet.damage = gunController.damage;
                         rightRifleBullet.range = gunController.range;
+
+                        Rigidbody leftRb3 = leftBulletObj3.GetComponent<Rigidbody>();
+                        leftRb3.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb3 = rightBulletObj3.GetComponent<Rigidbody>();
+                        rightRb3.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                     // grenade launcher
                     case 4:
-                        GrenadeBullet leftGrenadeBullet = leftBulletObj.GetComponent<GrenadeBullet>();
+                        GameObject leftBulletObj4 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj4 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        GrenadeBullet leftGrenadeBullet = leftBulletObj4.GetComponent<GrenadeBullet>();
                         leftGrenadeBullet.damage = gunController.damage;
                         leftGrenadeBullet.range = gunController.range;
 
-                        GrenadeBullet rightGrenadeBullet = rightBulletObj.GetComponent<GrenadeBullet>();
+                        GrenadeBullet rightGrenadeBullet = rightBulletObj4.GetComponent<GrenadeBullet>();
                         rightGrenadeBullet.damage = gunController.damage;
                         rightGrenadeBullet.range = gunController.range;
+
+                        Rigidbody leftRb4 = leftBulletObj4.GetComponent<Rigidbody>();
+                        leftRb4.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb4 = rightBulletObj4.GetComponent<Rigidbody>();
+                        rightRb4.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                     // minigun
                     case 5:
-                        MinigunBullet leftMinigunBullet = leftBulletObj.GetComponent<MinigunBullet>();
+                        GameObject leftBulletObj5 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj5 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        MinigunBullet leftMinigunBullet = leftBulletObj5.GetComponent<MinigunBullet>();
                         leftMinigunBullet.damage = gunController.damage;
                         leftMinigunBullet.range = gunController.range;
 
-                        MinigunBullet rightMinigunBullet = rightBulletObj.GetComponent<MinigunBullet>();
+                        MinigunBullet rightMinigunBullet = rightBulletObj5.GetComponent<MinigunBullet>();
                         rightMinigunBullet.damage = gunController.damage;
                         rightMinigunBullet.range = gunController.range;
+
+                        Rigidbody leftRb5 = leftBulletObj5.GetComponent<Rigidbody>();
+                        leftRb5.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb5 = rightBulletObj5.GetComponent<Rigidbody>();
+                        rightRb5.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                     // laser rifle
                     case 6:
-                        LaserBullet leftLaserBullet = leftBulletObj.GetComponent<LaserBullet>();
+                        GameObject leftBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject rightBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+
+                        LaserBullet leftLaserBullet = leftBulletObj6.GetComponent<LaserBullet>();
                         leftLaserBullet.damage = gunController.damage;
                         leftLaserBullet.range = gunController.range;
 
-                        LaserBullet rightLaserBullet = rightBulletObj.GetComponent<LaserBullet>();
+                        LaserBullet rightLaserBullet = rightBulletObj6.GetComponent<LaserBullet>();
                         rightLaserBullet.damage = gunController.damage;
                         rightLaserBullet.range = gunController.range;
+
+                        Rigidbody leftRb6 = leftBulletObj6.GetComponent<Rigidbody>();
+                        leftRb6.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
+                        Rigidbody rightRb6 = rightBulletObj6.GetComponent<Rigidbody>();
+                        rightRb6.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                 }

@@ -28,7 +28,7 @@ public class MinigunBullet : MonoBehaviour
 
             Destroy(gameObject);
         }
-        else if (other.tag != "Player" && other.tag != "Bullet")
+        else if (other.tag != "Player" && other.tag != "Bullet" && other.tag != "Left Bullet Spawn" && other.tag != "Right Bullet Spawn")
         {
             Destroy(gameObject);
         }
