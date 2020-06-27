@@ -6,31 +6,28 @@ public class LaserBullet : MonoBehaviour
 {
     public int damage;
     public float range;
+    LineRenderer lr;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, range);
+        lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Enemy")
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            enemy.TakeDamage(damage);
-
-            Destroy(gameObject);
+            if (hit.collider)
+            {
+                lr.SetPosition(1, hit.point);
+            }
         }
-        else if (other.tag != "Player" && other.tag != "Bullet" && other.tag != "Left Bullet Spawn" && other.tag != "Right Bullet Spawn")
+        else
         {
-            Destroy(gameObject);
+            lr.SetPosition(1, transform.forward * range);
         }
     }
 }
