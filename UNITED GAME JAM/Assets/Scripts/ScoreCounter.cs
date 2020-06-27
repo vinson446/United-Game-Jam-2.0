@@ -29,6 +29,9 @@ public class ScoreCounter : MonoBehaviour
 
     public void Addpoints(float pointAmmount)
     {
+        //add points
+        scoreAmount += pointAmmount * multiplierAmmount;
+
         //Check if mulitiplier has been reset
         if (currentMultiplerTimer <= 0)
         {
@@ -43,9 +46,6 @@ public class ScoreCounter : MonoBehaviour
 
         //reset multiplier
         currentMultiplerTimer = multiplierTimer;
-
-        //add points
-        scoreAmount += pointAmmount * multiplierAmmount;
 
         //refrerance and change multiplier
         FindObjectOfType<MultiplierBar>().ChangeMultiplier(multiplierAmmount);

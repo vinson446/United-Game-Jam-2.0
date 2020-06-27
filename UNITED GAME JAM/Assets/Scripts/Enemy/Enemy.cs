@@ -129,6 +129,8 @@ public class Enemy : MonoBehaviour
         // TODO- play death animation
         // TODO- play death sound effect
 
+        ScoreCounter scoreCounter = FindObjectOfType<ScoreCounter>();
+        scoreCounter.Addpoints(1);
         Destroy(gameObject);
     }
 }
