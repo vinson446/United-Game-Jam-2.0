@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Left Bullet Spawn
   - Right Bullet Spawn
+  - Enemy
   layers:
   - Default
   - TransparentFX

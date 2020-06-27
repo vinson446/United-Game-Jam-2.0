@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Stats")]
-    public float currentHP;
-    public float maxHP = 30f;
+    public int currentHP;
+    public int maxHP;
     public float moveSpeed = 5f;
     public float projectileSpeed;
 
@@ -18,12 +19,17 @@ public class PlayerController : MonoBehaviour
     GunController gunController;
     Upgrades upgrades;
 
+    [Header("UI")]
+    public Slider hpBar;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         currentHP = maxHP;
+        hpBar.maxValue = maxHP;
+        hpBar.value = currentHP;
 
         gunController = FindObjectOfType<GunController>();
         upgrades = GetComponent<Upgrades>();
@@ -219,5 +225,25 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        // TODO- play hurt animation
+        // TODO- play hurt sound effect
+
+        hpBar.value -= damage;
+        currentHP -= damage;
+
+        if (currentHP <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        // TODO- play death animation
+        // TODO- play death sound effect
+
+        Destroy(gameObject);
     }
 }
