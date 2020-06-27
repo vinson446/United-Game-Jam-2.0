@@ -205,21 +205,20 @@ public class PlayerController : MonoBehaviour
                         break;
                     // laser rifle
                     case 6:
-                        GameObject leftBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], leftBulletSpawn.transform.position, Quaternion.identity);
-                        GameObject rightBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], rightBulletSpawn.transform.position, Quaternion.identity);
+                        GameObject leftBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], Vector3.zero, Quaternion.identity);
+                        GameObject rightBulletObj6 = Instantiate(gunController.bullets[gunController.typeOfGun - 1], Vector3.zero, Quaternion.identity);
+                        //leftBulletObj6.transform.parent = GameObject.Find("L Bullet Spawn").transform;
+                        //rightBulletObj6.transform.parent = GameObject.Find("R Bullet Spawn").transform;
 
-                        LaserBullet leftLaserBullet = leftBulletObj6.GetComponent<LaserBullet>();
+                        LaserBullet leftLaserBullet = leftBulletObj6.GetComponentInChildren<LaserBullet>();
+                        leftLaserBullet.left = true;
                         leftLaserBullet.damage = gunController.damage;
                         leftLaserBullet.range = gunController.range;
 
-                        LaserBullet rightLaserBullet = rightBulletObj6.GetComponent<LaserBullet>();
+                        LaserBullet rightLaserBullet = rightBulletObj6.GetComponentInChildren<LaserBullet>();
+                        leftLaserBullet.left = false;
                         rightLaserBullet.damage = gunController.damage;
                         rightLaserBullet.range = gunController.range;
-
-                        Rigidbody leftRb6 = leftBulletObj6.GetComponent<Rigidbody>();
-                        leftRb6.AddForce(leftBulletSpawn.transform.forward * projectileSpeed);
-                        Rigidbody rightRb6 = rightBulletObj6.GetComponent<Rigidbody>();
-                        rightRb6.AddForce(rightBulletSpawn.transform.forward * projectileSpeed);
 
                         break;
                 }

@@ -19,19 +19,11 @@ public class GunController : MonoBehaviour
     public Transform rightBulletSpawn;
 
     [Header("Pistol")]
-    public GameObject pistol;
-    public Vector3 leftPistolOffset;
-    public Vector3 rightPistolOffset;
-
     public int pistolDamage;
     public float pistolFireRate;
     public float pistolRange;
 
     [Header("Shotgun")]
-    public GameObject shotgun;
-    public Vector3 leftShotgunOffset;
-    public Vector3 rightShotgunOffset;
-
     public int shotgunDamage;
     public float shotgunFireRate;
     public float shotgunRange;
@@ -40,10 +32,6 @@ public class GunController : MonoBehaviour
     public float shotgunMaxAmmo;
 
     [Header("Assault Rifle")]
-    public GameObject rifle;
-    public Vector3 leftRifleOffset;
-    public Vector3 rightRifleOffset;
-
     public int rifleDamage;
     public float rifleFireRate;
     public float rifleRange;
@@ -52,10 +40,6 @@ public class GunController : MonoBehaviour
     public float rifleMaxAmmo;
 
     [Header("GrenadeLauncher")]
-    public GameObject grenade;
-    public Vector3 leftGrenadeOffset;
-    public Vector3 rightGrenadeOffset;
-
     public int grenadeDamage;
     public float grenadeFireRate;
     public float grenadeRange;
@@ -66,10 +50,6 @@ public class GunController : MonoBehaviour
     public float grenadeAOERange;
 
     [Header("Minigun")]
-    public GameObject minigun;
-    public Vector3 leftMinigunOffset;
-    public Vector3 rightMinigunOffset;
-
     public int minigunDamage;
     public float minigunFireRate;
     public float minigunRange;
@@ -78,10 +58,6 @@ public class GunController : MonoBehaviour
     public float minigunMaxAmmo;
 
     [Header("Laser Rifle")]
-    public GameObject laser;
-    public Vector3 leftLaserOffset;
-    public Vector3 rightLaserOffset;
-
     public int laserDamage;
     public float laserFireRate;
     public float laserRange;
