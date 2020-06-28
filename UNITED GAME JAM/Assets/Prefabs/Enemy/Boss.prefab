@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3045801774656622257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.5, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3300687652300806452}
   - {fileID: 3045801776172188890}
@@ -48,15 +48,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfEnemy: 1
-  currentHP: 100
-  maxHP: 100
+  currentHP: 1000
+  maxHP: 1000
   moveSpeed: 3
-  damage: 10
-  attackRange: 5
+  damage: 50
+  attackRange: 25
   attackSpeed: 1
   bulletRange: 2
   bulletSpeed: 1000
-  bulletPrefab: {fileID: 3882691267315012908, guid: 59bed83b21385ca42816b81009d0f065,
+  bulletPrefab: {fileID: 3882691267315012908, guid: 6f0f401a561acbc4ba04f934f4daa050,
     type: 3}
   bulletSpawnPoint1: {fileID: 3045801776172188890}
   bulletSpawnPoint2: {fileID: 0}
@@ -122,13 +122,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3045801776172188893}
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.847, z: 3.124}
   m_LocalScale: {x: 0.46169, y: 0.46169, z: 0.46169}
   m_Children: []
   m_Father: {fileID: 3045801774656622222}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3045801776172188889
 MeshFilter:
   m_ObjectHideFlags: 0

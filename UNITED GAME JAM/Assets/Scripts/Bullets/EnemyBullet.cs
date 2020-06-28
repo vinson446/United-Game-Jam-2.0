@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
 
             Destroy(gameObject);
         }
-        else if (other.tag != "Bullet" && other.tag != "Left Bullet Spawn" && other.tag != "Right Bullet Spawn")
+        else if (other.tag != "Enemy" && other.tag != "Bullet" && other.tag != "Left Bullet Spawn" && other.tag != "Right Bullet Spawn")
         {
             Destroy(gameObject);
         }

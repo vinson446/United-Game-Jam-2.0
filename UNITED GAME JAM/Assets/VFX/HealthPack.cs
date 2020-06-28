@@ -25,11 +25,16 @@ public class HealthPack : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if(collider.tag == "Player")
+        if (collider.tag == "Player")
         {
             PlayerController player = collider.GetComponent<PlayerController>();
-            Debug.Log("Healed Player for " + HealthAmmount);
+
             player.currentHP += HealthAmmount;
+
+            if (player.currentHP > player.maxHP)
+                player.currentHP = player.maxHP;
+
+            Destroy(gameObject);
         }
     }
 
@@ -39,7 +44,7 @@ public class HealthPack : MonoBehaviour
 
     void Spin()
     {
-        transform.Rotate(new Vector3(0, 0, rotationAmmount) * Time.deltaTime * rotationSpeed);
+        transform.Rotate(new Vector3(0, rotationAmmount, 0) * Time.deltaTime * rotationSpeed);
         transform.Translate(new Vector3(0, 0, Mathf.Sin(Time.time * bounceAmmount)) * Time.deltaTime);
     }
 }

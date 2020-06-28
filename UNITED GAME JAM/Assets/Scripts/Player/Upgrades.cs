@@ -10,14 +10,39 @@ public class Upgrades : MonoBehaviour
     public int[] scoreThresholds;
     public int weaponUpgrades = 1;
 
-    public int damageUpgrade;
-    public float atkSpeedUpgrade;
-    public int ammoUpgrade;
+    [Header("Pistol Upgrades")]
+    public int pistolDamageUpgrade;
+    public float pistolAtkSpeedUpgrade;
+
+    [Header("Shotgun Upgrades")]
+    public int shotgunDamageUpgrade;
+    public float shotgunAtkSpeedUpgrade;
+    public int shotgunMaxAmmoUpgrade;
+
+    [Header("Assault Rifle Upgrades")]
+    public int rifleDamageUpgrade;
+    public float rifleAtkSpeedUpgrade;
+    public int rifleMaxAmmoUpgrade;
+
+    [Header("Grenade Launcher Upgrades")]
+    public int grenadeDamageUpgrade;
+    public float grenadeAtkSpeedUpgrade;
+    public int grenadeMaxAmmoUpgrade;
+
+    [Header("Minigun")]
+    public int minigunDamageUpgrade;
+    public float minigunAtkSpeedUpgrade;
+    public int minigunMaxAmmoUpgrade;
+
+    [Header("Laser Rifle")]
+    public int laserDamageUpgrade;
+    public float laserAtkSpeedUpgrade;
+    public int laserMaxAmmoUpgrade;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreCounter = GetComponent<ScoreCounter>();
+        scoreCounter = FindObjectOfType<ScoreCounter>();
         gunController = FindObjectOfType<GunController>();
     }
 
@@ -27,19 +52,19 @@ public class Upgrades : MonoBehaviour
         // laser rifle atk speed
         if (scoreCounter.scoreAmount >= scoreThresholds[21])
         {
-            gunController.laserFireRate += atkSpeedUpgrade;
+            gunController.laserFireRate = laserAtkSpeedUpgrade;
             gunController.fireRate = gunController.laserFireRate;
         }
         // laser rifle damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[20])
         {
-            gunController.laserDamage += damageUpgrade;
+            gunController.laserDamage = laserDamageUpgrade;
             gunController.damage = gunController.laserDamage;
         }
         // laser rifle ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[19])
         {
-            gunController.laserMaxAmmo += ammoUpgrade;
+            gunController.laserMaxAmmo = laserMaxAmmoUpgrade;
         }
         // laser rifle unlock
         else if (scoreCounter.scoreAmount >= scoreThresholds[18])
@@ -50,19 +75,19 @@ public class Upgrades : MonoBehaviour
         // minigun atk speed
         else if (scoreCounter.scoreAmount >= scoreThresholds[17])
         {
-            gunController.minigunFireRate += atkSpeedUpgrade;
+            gunController.minigunFireRate = minigunAtkSpeedUpgrade;
             gunController.fireRate = gunController.minigunFireRate;
         }
         // minigun damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[16])
         {
-            gunController.minigunDamage += damageUpgrade;
+            gunController.minigunDamage = minigunDamageUpgrade;
             gunController.damage = gunController.minigunDamage;
         }
         // minigun ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[15])
         {
-            gunController.minigunMaxAmmo += ammoUpgrade;
+            gunController.minigunMaxAmmo = minigunMaxAmmoUpgrade;
         }
         // minigun unlock
         else if (scoreCounter.scoreAmount >= scoreThresholds[14])
@@ -73,19 +98,19 @@ public class Upgrades : MonoBehaviour
         // grenade atk speed
         else if (scoreCounter.scoreAmount >= scoreThresholds[13])
         {
-            gunController.grenadeFireRate += atkSpeedUpgrade;
+            gunController.grenadeFireRate = grenadeAtkSpeedUpgrade;
             gunController.fireRate = gunController.grenadeFireRate;
         }
         // grenade damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[12])
         {
-            gunController.grenadeDamage += damageUpgrade;
+            gunController.grenadeDamage = grenadeDamageUpgrade;
             gunController.damage = gunController.grenadeDamage;
         }
         // grenade ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[11])
         {
-            gunController.grenadeMaxAmmo += ammoUpgrade;
+            gunController.grenadeMaxAmmo = grenadeMaxAmmoUpgrade;
         }
         // grenade unlock
         else if (scoreCounter.scoreAmount >= scoreThresholds[10])
@@ -96,19 +121,19 @@ public class Upgrades : MonoBehaviour
         // rifle atk speed
         else if (scoreCounter.scoreAmount >= scoreThresholds[9])
         {
-            gunController.rifleFireRate += atkSpeedUpgrade;
+            gunController.rifleFireRate = rifleAtkSpeedUpgrade;
             gunController.fireRate = gunController.rifleFireRate;
         }
         // rifle damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[8])
         {
-            gunController.rifleDamage += damageUpgrade;
+            gunController.rifleDamage = rifleDamageUpgrade;
             gunController.damage = gunController.rifleDamage;
         }
         // rifle ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[7])
         {
-            gunController.rifleMaxAmmo += ammoUpgrade;
+            gunController.rifleMaxAmmo = rifleMaxAmmoUpgrade;
         }
         // rifle ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[6])
@@ -119,19 +144,19 @@ public class Upgrades : MonoBehaviour
         // shotgun atk speed
         else if (scoreCounter.scoreAmount >= scoreThresholds[5])
         {
-            gunController.shotgunFireRate += atkSpeedUpgrade;
+            gunController.shotgunFireRate = shotgunAtkSpeedUpgrade;
             gunController.fireRate = gunController.shotgunFireRate;
         }
         // shotgun damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[4])
         {
-            gunController.shotgunDamage += damageUpgrade;
+            gunController.shotgunDamage = shotgunDamageUpgrade;
             gunController.damage = gunController.shotgunDamage;
         }
         // shotgun ammo
         else if (scoreCounter.scoreAmount >= scoreThresholds[3])
         {
-            gunController.shotgunMaxAmmo += ammoUpgrade;
+            gunController.shotgunMaxAmmo = shotgunDamageUpgrade;
         }
         // shotgun unlock
         else if (scoreCounter.scoreAmount >= scoreThresholds[2])
@@ -142,13 +167,13 @@ public class Upgrades : MonoBehaviour
         // pistol atk speed
         else if (scoreCounter.scoreAmount >= scoreThresholds[1])
         {
-            gunController.pistolFireRate += atkSpeedUpgrade;
+            gunController.pistolFireRate = pistolAtkSpeedUpgrade;
             gunController.fireRate = gunController.pistolFireRate;
         }
         // pistol damage
         else if (scoreCounter.scoreAmount >= scoreThresholds[0])
         {
-            gunController.pistolDamage += damageUpgrade;
+            gunController.pistolDamage = pistolDamageUpgrade;
             gunController.damage = gunController.pistolDamage;
         }
     }

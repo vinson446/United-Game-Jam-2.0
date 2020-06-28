@@ -18,11 +18,15 @@ public class LevelManager : MonoBehaviour
     public GameObject[] enemyObjsToSpawn;
     public Transform[] enemySpawnPoints;
 
+    ScoreCounter scoreCounter;
+
     // Start is called before the first frame update
     void Start()
     {
         currentNumberOfEnemies = maxNumberOfEnemies;
         numberOfEnemiesLeftToSpawn = maxNumberOfEnemies;
+
+        scoreCounter = FindObjectOfType<ScoreCounter>();
     }
 
     // Update is called once per frame
@@ -64,9 +68,12 @@ public class LevelManager : MonoBehaviour
     {
         isSpawningEnemies = true;
 
-        for (int i = 0; i < Random.Range(0, numberOfEnemiesLeftToSpawn + 1); i++)
+        if (scoreCounter.scoreAmount > 10000)
         {
-            Instantiate(enemyObjsToSpawn[0], enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)].position, Quaternion.identity);
+            for (int i = 0; i < Random.Range(0, numberOfEnemiesLeftToSpawn + 1); i++)
+            {
+                Instantiate(enemyObjsToSpawn[0], enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)].position, Quaternion.identity);
+            }
         }
 
         yield return new WaitForSeconds(spawnIntervals);

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GunController : MonoBehaviour
 {
@@ -65,6 +67,9 @@ public class GunController : MonoBehaviour
     public float laserCurrentAmmo;
     public float laserMaxAmmo;
 
+    [Header("UI")]
+    public TextMeshProUGUI gunText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +93,8 @@ public class GunController : MonoBehaviour
                 damage = pistolDamage;
                 fireRate = pistolFireRate;
                 range = pistolRange;
+
+                gunText.text = "Pistol: ∞";
                 break;
             // shotgun
             case 2:
@@ -99,6 +106,8 @@ public class GunController : MonoBehaviour
 
                 maxAmmo = shotgunMaxAmmo;
                 currentAmmo = shotgunCurrentAmmo;
+
+                gunText.text = "Shotgun: " + currentAmmo.ToString();
                 break;
             // assault rifle
             case 3:
@@ -110,6 +119,8 @@ public class GunController : MonoBehaviour
 
                 maxAmmo = rifleMaxAmmo;
                 currentAmmo = rifleCurrentAmmo;
+
+                gunText.text = "Assault Rifle: " + currentAmmo.ToString();
                 break;
             // grenade launcher
             case 4:
@@ -121,6 +132,8 @@ public class GunController : MonoBehaviour
 
                 maxAmmo = grenadeMaxAmmo;
                 currentAmmo = grenadeCurrentAmmo;
+
+                gunText.text = "Grenade Launcher: " + currentAmmo.ToString();
                 break;
             // minigun
             case 5:
@@ -132,6 +145,8 @@ public class GunController : MonoBehaviour
 
                 maxAmmo = minigunMaxAmmo;
                 currentAmmo = minigunCurrentAmmo;
+
+                gunText.text = "Minigun: " + currentAmmo.ToString();
                 break;
             // laser rifle
             case 6:
@@ -143,6 +158,8 @@ public class GunController : MonoBehaviour
 
                 maxAmmo = minigunMaxAmmo;
                 currentAmmo = minigunCurrentAmmo;
+
+                gunText.text = "Laser Rifle: " + currentAmmo.ToString();
                 break;
         }
 

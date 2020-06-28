@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3322763623014672664}
-  m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0.415, y: 0.218, z: 1.3826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.415, y: 0.226, z: 1.3826}
   m_LocalScale: {x: 0.24187, y: 0.24187, z: 0.24187}
   m_Children: []
   m_Father: {fileID: 3322763624545710232}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3322763623014672660
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -142,15 +142,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfEnemy: 1
-  currentHP: 100
-  maxHP: 100
+  currentHP: 50
+  maxHP: 50
   moveSpeed: 3
   damage: 10
   attackRange: 20
   attackSpeed: 1
   bulletRange: 2
-  bulletSpeed: 1000
-  bulletPrefab: {fileID: 3882691267315012908, guid: 59bed83b21385ca42816b81009d0f065,
+  bulletSpeed: 2000
+  bulletPrefab: {fileID: 3882691267315012908, guid: b71ea2ddd5920b847bf42d4908716781,
     type: 3}
   bulletSpawnPoint1: {fileID: 3322763624559188900}
   bulletSpawnPoint2: {fileID: 3322763623014672665}
@@ -174,7 +174,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!135 &3322763624545710235
@@ -216,13 +216,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3322763624559188907}
-  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -0.41700006, y: 0.218, z: 1.3825998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.41700006, y: 0.226, z: 1.3825998}
   m_LocalScale: {x: 0.24187, y: 0.24187, z: 0.24187}
   m_Children: []
   m_Father: {fileID: 3322763624545710232}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3322763624559188903
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -349,6 +349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: drone_mid
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aab24e6f1d42a0b48ba87ab96b89907c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aab24e6f1d42a0b48ba87ab96b89907c, type: 3}
