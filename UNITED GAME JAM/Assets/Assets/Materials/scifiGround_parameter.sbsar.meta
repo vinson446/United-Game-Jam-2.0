@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77d4288b9123cb74891b1d9137639ee9
+guid: 6b0680f14e93c4e478f68bb793f5b690
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -18,9 +18,9 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://ground\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
       uid=\"2433196327\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"Roughness\"
-      uid=\"4181980772\" type=\"0\" value=\"0.284\" />\n  <presetinput identifier=\"Bolt_Size\"
-      uid=\"4181977674\" type=\"0\" value=\"0.077\" />\n  <presetinput identifier=\"Cross_Size\"
-      uid=\"4181975995\" type=\"1\" value=\"0.063,0.676\" />\n </sbspreset>\n"
+      uid=\"4181980772\" type=\"0\" value=\"0.306\" />\n  <presetinput identifier=\"Bolt_Size\"
+      uid=\"4181977674\" type=\"0\" value=\"0.092\" />\n  <presetinput identifier=\"Cross_Size\"
+      uid=\"4181975995\" type=\"1\" value=\"0.082,0.73\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -33,7 +33,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
-        texture: {fileID: -1184816791994493695, guid: 77d4288b9123cb74891b1d9137639ee9,
+        texture: {fileID: -1184816791994493695, guid: 6b0680f14e93c4e478f68bb793f5b690,
           type: 3}
         scale: {x: 30, y: 30}
         offset: {x: 0, y: 0}
@@ -62,7 +62,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _HeightMap
-        texture: {fileID: -4554211199915012536, guid: 77d4288b9123cb74891b1d9137639ee9,
+        texture: {fileID: -4554211199915012536, guid: 6b0680f14e93c4e478f68bb793f5b690,
           type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
@@ -75,17 +75,17 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MainTex
-        texture: {fileID: -1184816791994493695, guid: 77d4288b9123cb74891b1d9137639ee9,
+        texture: {fileID: -1184816791994493695, guid: 6b0680f14e93c4e478f68bb793f5b690,
           type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {fileID: -6958588421375559385, guid: 77d4288b9123cb74891b1d9137639ee9,
+        texture: {fileID: -6958588421375559385, guid: 6b0680f14e93c4e478f68bb793f5b690,
           type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
-        texture: {fileID: 4575087319769205542, guid: 77d4288b9123cb74891b1d9137639ee9,
+        texture: {fileID: 4575087319769205542, guid: 6b0680f14e93c4e478f68bb793f5b690,
           type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
@@ -257,7 +257,7 @@ ScriptedImporter:
       - name: _NormalMapSpace
         float: 0
       - name: _NormalScale
-        float: 2.12
+        float: 3.46
       - name: _PPDLodThreshold
         float: 5
       - name: _PPDMaxSamples
@@ -554,10 +554,10 @@ ScriptedImporter:
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: -3954252153447468787, guid: 77d4288b9123cb74891b1d9137639ee9,
+    material: {fileID: -3954252153447468787, guid: 6b0680f14e93c4e478f68bb793f5b690,
       type: 3}
     generatedTextures:
-    - {fileID: -1184816791994493695, guid: 77d4288b9123cb74891b1d9137639ee9, type: 3}
-    - {fileID: 4575087319769205542, guid: 77d4288b9123cb74891b1d9137639ee9, type: 3}
-    - {fileID: -4554211199915012536, guid: 77d4288b9123cb74891b1d9137639ee9, type: 3}
-    - {fileID: -6958588421375559385, guid: 77d4288b9123cb74891b1d9137639ee9, type: 3}
+    - {fileID: -1184816791994493695, guid: 6b0680f14e93c4e478f68bb793f5b690, type: 3}
+    - {fileID: 4575087319769205542, guid: 6b0680f14e93c4e478f68bb793f5b690, type: 3}
+    - {fileID: -4554211199915012536, guid: 6b0680f14e93c4e478f68bb793f5b690, type: 3}
+    - {fileID: -6958588421375559385, guid: 6b0680f14e93c4e478f68bb793f5b690, type: 3}

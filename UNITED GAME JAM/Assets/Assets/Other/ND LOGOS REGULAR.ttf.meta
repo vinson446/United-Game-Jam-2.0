@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8582ab1f9fe938b4e88ad863de368933
+guid: 428d78caa0a6ca2478cc7b44aae9eedf
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: My Font
+  fontName: ND LOGOS
   fontNames:
-  - My Font
+  - ND LOGOS
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
