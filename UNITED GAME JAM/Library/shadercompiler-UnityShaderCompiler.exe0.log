@@ -1,5 +1,6 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Users/vinso/OneDrive/Desktop/Unity/2019.4.1f1/Editor/Data', plugins path 'C:/Users/vinso/OneDrive/Desktop/Unity/2019.4.1f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< Updated upstream
 Cmd: compileSnippet
   api=4 type=1 insize=7122 outsize=1742 kw=UNDERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
@@ -8,3 +9,13 @@ Cmd: compileSnippet
   api=4 type=1 insize=7122 outsize=2218 kw=GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=7122 outsize=4622 kw=UNDERLAY_ON BEVEL_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+=======
+Cmd: preprocessCompute
+  insize=7178 outsize=7180 ok=1
+Cmd: preprocessCompute
+  insize=7235 outsize=7237 ok=1
+Cmd: preprocess
+  insize=39913 outsize=631 ok=1
+Cmd: preprocessCompute
+  insize=1978 outsize=1980 ok=1
+>>>>>>> Stashed changes
