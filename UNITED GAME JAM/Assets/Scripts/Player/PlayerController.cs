@@ -241,7 +241,7 @@ public class PlayerController : MonoBehaviour
     {
         // TODO- play death animation
         // TODO- play death sound effect
-
+        FindObjectOfType<GameManager>().EndGame();
         Destroy(gameObject);
     }
 }

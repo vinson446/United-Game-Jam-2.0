@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/Scenes/Thuan's Scene.unity
-=======
-- path: Assets/Scenes/Menu.unity
->>>>>>> Stashed changes
+- path: Assets/Scenes/Vinson's SceneEdit.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
