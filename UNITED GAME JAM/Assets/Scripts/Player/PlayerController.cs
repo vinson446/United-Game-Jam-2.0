@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
         {
             if (Time.time >= nextAttack)
             {
-                print("Shoot");
                 nextAttack = Time.time + 1 / gunController.fireRate;
 
                 GameObject leftBulletSpawn = GameObject.FindGameObjectWithTag("Left Bullet Spawn");

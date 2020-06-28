@@ -28,12 +28,16 @@ public class Enemy : MonoBehaviour
     // references
     PlayerController playerController;
     NavMeshAgent navMeshAgent;
+    LevelManager levelManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+
+        levelManager = FindObjectOfType<LevelManager>();
+        levelManager.EnemySpawned();
 
         currentHP = maxHP;
     }
@@ -131,6 +135,9 @@ public class Enemy : MonoBehaviour
 
         ScoreCounter scoreCounter = FindObjectOfType<ScoreCounter>();
         scoreCounter.Addpoints(1);
+
+        levelManager.EnemyDied();
+
         Destroy(gameObject);
     }
 }
