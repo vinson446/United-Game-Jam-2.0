@@ -109,6 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   range: 0
+  explosionRange: 5
+  explossionEffect: {fileID: 5975856045539646772, guid: e3988e9b325b0aa4d80f94b412171070,
+    type: 3}
 --- !u!54 &-8222660578898706190
 Rigidbody:
   m_ObjectHideFlags: 0
